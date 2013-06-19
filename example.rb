@@ -1,5 +1,18 @@
-variable = "algo" # Local variable
-@variable = "Otro valor" # Instance Variable
-@@variable = "Class value" # Class Variable
-$variable = "Global value" # Global variable
-VARIABLE = "Constant value" # Constant
+class Something
+
+  ## Class method
+  def self.say_hello_class
+    puts "Hello class world!"
+  end
+
+  ## Instance method
+  def say_hello_instance
+    puts "Hello instance world!"
+  end
+
+end
+
+something = Something.new
+something.say_hello_instance
+
+Something.say_hello_class
