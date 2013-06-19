@@ -1,18 +1,11 @@
-class Something
-
-  ## Class method
-  def self.say_hello_class
-    puts "Hello class world!"
+class BookInStock
+  attr_accessor :isbn, :price
+  def initialize(isbn, price)
+    @isbn = isbn
+    @price = price
   end
 
-  ## Instance method
-  def say_hello_instance
-    puts "Hello instance world!"
+  def to_s
+    "ISBN: #{@isbn}, Price: #{@price}"
   end
-
 end
-
-something = Something.new
-something.say_hello_instance
-
-Something.say_hello_class
